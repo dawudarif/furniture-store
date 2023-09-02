@@ -1,0 +1,24 @@
+footer {
+  padding: 5rem;
+  background: var(--blue);
+  color: var(--white);
+  gap: 2rem;
+}
+
+.img-map {
+  gap: 1rem;
+}
+
+.img-map img {
+  border-radius: 5px;
+}
+
+.beauty h4,
+.follow h4,
+.ig-shop h4 {
+  font-size: 1.5rem;
+}
+
+.icon span {
+  padding-right: 1rem;
+}

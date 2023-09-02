@@ -1,0 +1,15 @@
+.about {
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.about h1 {
+  font-size: 3rem;
+  color: var(--blue);
+  margin-bottom: 2rem;
+}
+
+.about p {
+  color: var(--grey);
+  line-height: 25px;
+}

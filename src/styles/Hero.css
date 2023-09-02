@@ -1,0 +1,54 @@
+.hero {
+  height: 40rem;
+  width: 100%;
+  background-image: url(../assets/hero.svg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-child {
+  position: absolute;
+  background-color: var(--bg-blue);
+  right: 5rem;
+  border-radius: 15px;
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 27rem;
+  width: 40rem;
+  box-shadow: 3px 3px black;
+}
+
+.hero-child h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.hero-child p {
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--grey);
+}
+
+.hero-child h1 {
+  color: var(--blue);
+  font-weight: 900;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.hero-child button {
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.8rem;
+  height: 3rem;
+  padding: 0.5rem;
+  width: 10rem;
+  border: none;
+  border-radius: 30px;
+}

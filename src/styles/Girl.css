@@ -1,0 +1,67 @@
+.girl-section {
+  padding: 7rem;
+  height: 30rem;
+  gap: 4rem;
+  background-color: var(--bg-blue);
+}
+
+.image-section {
+  position: relative;
+  width: 30%;
+}
+
+.image-section img {
+  height: 38rem;
+  width: 25rem;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.sphere {
+  width: 20rem;
+  height: 20rem;
+  background-color: #09513b;
+  border-radius: 50%;
+  position: absolute;
+  top: 12rem;
+  left: 8.5rem;
+  z-index: 1;
+}
+
+.text-section {
+  width: 60%;
+}
+
+.text-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 450;
+}
+
+.text-section button {
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 550;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  height: 3rem;
+  padding: 0.5rem;
+  width: 10rem;
+  border: none;
+  border-radius: 30px;
+}
+
+.text-section button:hover {
+  opacity: 0.85;
+  transition: all;
+  transition-duration: 1s;
+}

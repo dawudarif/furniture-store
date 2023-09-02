@@ -1,0 +1,22 @@
+.ic-section {
+  flex-direction: column;
+  padding: 5rem;
+  background-color: var(--white);
+}
+
+.ic-section h1 {
+  margin: 0;
+}
+
+.ic-section p {
+  color: var(--grey);
+}
+
+.f-img {
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.two {
+  margin-bottom: 4rem;
+}
