@@ -3,22 +3,43 @@ footer {
   background: var(--blue);
   color: var(--white);
   gap: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .img-map {
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .img-map img {
   border-radius: 5px;
+  height: 14rem;
+  width: 14rem;
 }
 
 .beauty h4,
 .follow h4,
 .ig-shop h4 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.beauty p {
+  color: var(--white);
 }
 
 .icon span {
   padding-right: 1rem;
+}
+
+.icon span svg:hover {
+  color: var(--grey);
+}
+
+.beauty-parent {
+  width: 40%;
+}
+
+.ig-shop {
+  width: 60%;
 }

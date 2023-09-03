@@ -18,13 +18,13 @@ const Navbar = () => {
             <Link to='/'>Home</Link>
           </li>
           <li>
+            <Link to='/shop'>Shop</Link>
+          </li>
+          <li>
             <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/'>Shop</Link>
-          </li>
-          <li>
-            <Link to='/'>Contact</Link>
+            <Link to='/contact'>Contact</Link>
           </li>
           <li>
             <img src={cart} alt='cart' className='cart' />

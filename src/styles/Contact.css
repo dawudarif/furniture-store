@@ -1,0 +1,41 @@
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact {
+  flex-direction: column;
+  padding: 7rem;
+}
+
+.contact-body {
+  flex-direction: row;
+  gap: 3rem;
+  font-size: 1rem;
+}
+.head {
+  flex-direction: column;
+}
+.head h1 {
+  font-size: 3rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+.head p {
+  font-size: 1rem;
+  color: var(--grey);
+  margin-bottom: 3rem;
+}
+.email {
+  gap: 4px;
+}
+
+.email p {
+  font-weight: 600;
+  color: var(--grey);
+}
+.email p:hover {
+  color: var(--blue);
+}

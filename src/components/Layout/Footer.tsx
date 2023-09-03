@@ -10,7 +10,7 @@ const IGImages = [IG1, IG2, IG3, IG4];
 
 const Footer = () => {
   return (
-    <footer className='flex'>
+    <footer>
       <div className='beauty-parent'>
         <span className='beauty'>
           <h4>Beauty Care</h4>

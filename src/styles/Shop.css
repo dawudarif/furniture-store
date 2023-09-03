@@ -1,0 +1,102 @@
+.shop {
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.shop h1 {
+  font-size: 3rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+.item img {
+  height: 20rem;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  width: 20rem;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 1rem;
+}
+
+.item:hover {
+  border: 3px solid var(--blue);
+  display: flex;
+}
+
+button {
+  background-color: var(--blue);
+  height: 3rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  width: 8rem;
+  color: var(--white);
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.text-container h4 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.text-container h6 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.text-container p {
+  color: var(--grey);
+  font-size: medium;
+  height: 3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tags {
+  gap: 1rem;
+}
+
+.tag {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey);
+  padding: 0.5rem;
+  height: 1rem;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px solid black;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: all;
+  transition-duration: 1s;
+  border: none;
+}
+
+.bold-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem;
+}
