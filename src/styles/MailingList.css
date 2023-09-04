@@ -1,0 +1,94 @@
+.mailing-section {
+  background: var(--bg-blue);
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.mailing-text {
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.mailing-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.mailing-text p {
+  color: var(--grey);
+}
+.mailing-form {
+  gap: 0;
+}
+.mailing-form input {
+  height: 3.5rem;
+  width: 18rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--blue);
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.mailing-form button {
+  background-color: var(--blue);
+  height: 3.5rem;
+  color: var(--white);
+  font-weight: 500;
+  width: 6rem;
+  display: inline-block;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+}
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .mailing-form {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .mailing-form input {
+    height: 3rem;
+    width: 16rem;
+  }
+
+  .mailing-form button {
+    height: 3rem;
+    width: 5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .mailing-form input {
+    height: 3rem;
+    width: 16rem;
+  }
+
+  .mailing-form button {
+    height: 3rem;
+    width: 5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .mailing-form input {
+    height: 3rem;
+    width: 16rem;
+  }
+
+  .mailing-form button {
+    height: 3rem;
+    width: 6rem;
+    font-size: 1rem;
+  }
+}

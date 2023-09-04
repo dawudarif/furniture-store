@@ -65,50 +65,44 @@
   margin-bottom: 1rem;
 }
 
-.mailing-section {
-  background: var(--bg-blue);
-  flex-direction: column;
-  padding: 3rem;
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .img-works {
+    flex-wrap: wrap;
+  }
+  .img-container img {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 
-.mailing-text {
-  flex-direction: column;
-  margin-bottom: 3rem;
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .img-works {
+    flex-wrap: wrap;
+  }
+  .img-container img {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
-.mailing-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.mailing-text p {
-  color: var(--grey);
-}
-.mailing-form {
-  gap: 0;
-}
-.mailing-form input {
-  height: 3.5rem;
-  width: 18rem;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--blue);
-  background: var(--white);
-  box-sizing: border-box;
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-works {
+    flex-wrap: wrap;
+  }
+  .img-container img {
+    width: 22rem;
+    height: 22rem;
+  }
 }
 
-.mailing-form button {
-  background-color: var(--blue);
-  height: 3.5rem;
-  color: var(--white);
-  font-weight: 500;
-  width: 6rem;
-  display: inline-block;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--blue);
-  box-sizing: border-box;
+/* Large (LG) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Your CSS rules for most desktop and laptop screens */
+  .img-container img {
+    width: 24rem;
+    height: 24rem;
+  }
 }

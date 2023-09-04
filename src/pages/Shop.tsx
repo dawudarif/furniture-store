@@ -1,7 +1,6 @@
 import '../styles/Shop.css';
 import { ShopData } from '../components/Data/ShopData';
 import { useEffect, useState } from 'react';
-import { log } from 'console';
 
 const Shop = () => {
   const [hovered, setHovered] = useState(false);
@@ -15,17 +14,23 @@ const Shop = () => {
       : ShopData;
 
   const calculateTags = (shopData: any) => {
-    setDisplayTags([]);
     let newTags = shopData.map((item: any) => item.type);
     const uniqueFurniture = new Set(newTags);
     const furnitureArray = Array.from(uniqueFurniture);
-    let final = furnitureArray.unshift('All');
+    furnitureArray.unshift('All');
     setDisplayTags(furnitureArray as string[]);
   };
 
   useEffect(() => {
     calculateTags(ShopData);
   }, []);
+
+  const addToCart = (item: any) => {
+    // Get the current cart items from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
 
   return (
     <main className='flex shop'>
@@ -69,10 +74,11 @@ const Shop = () => {
             />
             <div className='text-container'>
               <h4>{item.title}</h4>
-              <p>{item.desc}</p>
               <h6>${item.price}</h6>
             </div>
-            <button>Cart</button>
+            <button onClick={() => addToCart({ ...item, quantity: 1 })}>
+              Cart
+            </button>
           </div>
         ))}
       </div>

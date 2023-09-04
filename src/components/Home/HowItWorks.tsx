@@ -13,7 +13,6 @@ const HowItWorks = () => {
           <div className='container' key={item.id}>
             <span className='img-container'>
               <img src={item.img} alt={item.title} />
-
               <div className='flex'>{item.id}.</div>
             </span>
             <span className='text-container'>

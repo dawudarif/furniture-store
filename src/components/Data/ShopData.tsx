@@ -172,7 +172,7 @@ export const ShopData = [
     ],
     desc: 'Sectional, 6-seat, with chaise, right with headrests/Samsala gray-beige',
     type: 'sofa',
-    price: '6,110.00',
+    price: '6110.00',
   },
 
   {

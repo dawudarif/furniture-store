@@ -6,7 +6,6 @@
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -42,4 +41,25 @@
 .cart {
   height: 2rem;
   width: 2rem;
+}
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .nav-link {
+    display: none;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .nav-link {
+    display: none;
+  }
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-link {
+    display: none;
+  }
 }

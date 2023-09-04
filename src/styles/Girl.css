@@ -65,3 +65,82 @@
   transition: all;
   transition-duration: 1s;
 }
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .girl-section {
+    flex-wrap: wrap-reverse;
+    height: max-content;
+    padding: 2rem;
+  }
+  .image-section img {
+    height: 22rem;
+    width: 15rem;
+  }
+  .sphere {
+    width: 8rem;
+    height: 8rem;
+  }
+  .image-section {
+    width: 100%;
+  }
+  .text-section {
+    width: 100%;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .girl-section {
+    flex-wrap: wrap-reverse;
+    height: max-content;
+    padding: 2rem;
+  }
+  .image-section img {
+    height: 30rem;
+    width: 20rem;
+  }
+  .sphere {
+    width: 15rem;
+    height: 15rem;
+  }
+  .image-section {
+    width: 100%;
+  }
+  .text-section {
+    width: 100%;
+  }
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .girl-section {
+    padding: 4rem;
+  }
+  .image-section img {
+    height: 32rem;
+    width: 20rem;
+  }
+  .sphere {
+    width: 14rem;
+    height: 14rem;
+  }
+  .text-section {
+    width: 50%;
+  }
+  .image-section {
+    width: 50%;
+  }
+}
+
+/* Large (LG) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .image-section img {
+    height: 32rem;
+    width: 20rem;
+  }
+  .sphere {
+    width: 16rem;
+    height: 16rem;
+  }
+}
