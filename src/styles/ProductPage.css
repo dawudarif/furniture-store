@@ -1,0 +1,131 @@
+.product-page {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 7rem;
+  gap: 5rem;
+}
+
+.img-parent {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.img-parent img {
+  height: 30rem;
+  width: 30rem;
+  border: 2px solid var(--grey);
+  border-spacing: 1rem;
+}
+
+.img-child {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.img-child img {
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.details-container {
+  background-color: var(--bg-grey);
+  color: var(--black);
+  padding: 3rem;
+  height: 30rem;
+  width: 35rem;
+  position: relative;
+}
+
+.value-buttons {
+  justify-content: flex-start;
+}
+
+.value-buttons button {
+  height: 3rem;
+  width: 4rem;
+  color: black;
+  border: none;
+  background-color: var(--white);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+.value-buttons p {
+  height: 1.9rem;
+  width: 2rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--bg-grey);
+  color: var(--black);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.quantity-box {
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-top: 4rem;
+  position: absolute;
+  bottom: 14rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  bottom: 10rem;
+}
+
+.button-box {
+  width: 42rem;
+  height: 4rem;
+  gap: 1rem;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.button-box button {
+  height: 3.5rem;
+  width: 35%;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+.cart-button,
+.added-button {
+  background-color: var(--bg-grey);
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+.cart-button:hover,
+.added-button:hover {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+.buy-button {
+  margin-left: 2rem;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+.buy-button:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border: 2px solid var(--red);
+}

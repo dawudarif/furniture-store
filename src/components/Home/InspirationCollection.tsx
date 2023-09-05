@@ -1,6 +1,6 @@
-import IC1 from '../../assets/one.svg';
-import IC2 from '../../assets/two.svg';
-import IC3 from '../../assets/three.svg';
+import IC1 from '../../assets/one.jpg';
+import IC2 from '../../assets/two.jpg';
+import IC3 from '../../assets/three.jpg';
 import '../../styles/InspirationCollection.css';
 
 const InspirationCollection = () => {

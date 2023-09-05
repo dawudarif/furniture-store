@@ -5,6 +5,7 @@ import About from './pages/About';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
 import Shop from './pages/Shop';
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='shop' element={<Shop />} />
         <Route path='cart' element={<Cart />} />
-
-        {/* <Route path='categories/product/:id' element={<ProductPage />} /> */}
+        <Route path='/shop/:id' element={<ProductPage />} />
       </Routes>
       <Footer />
     </>

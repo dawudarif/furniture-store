@@ -5,13 +5,6 @@
   padding: 5rem;
 }
 
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-
 .cart-header h2 {
   margin: 0;
   font-size: 3rem;
@@ -37,6 +30,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .cart-item img {
@@ -44,45 +38,87 @@
   height: 10rem;
 }
 
-.item-details h3 {
-  margin: 0;
+.item-details {
+  margin-top: 1rem;
+}
+
+.item-details h3,
+.item-details p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin: 0.5rem;
 }
 
 .cart-footer {
+  display: flex;
+  flex-direction: column;
   margin-top: auto;
   padding: 20px;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .checkout-button {
-  background-color: #333;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
   border: none;
-  padding: 10px 20px;
+  font-weight: 600;
+  height: 3rem;
+  text-align: center;
+  width: 7rem;
+  padding: 1rem;
   cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
 }
-
 .checkout-button:hover {
-  background-color: #555;
+  background-color: var(--white);
+  color: var(--grey);
+  border: 2px solid var(--grey);
 }
-
+.clear-all {
+  background-color: var(--white);
+  color: var(--red);
+  border: 2px solid var(--red);
+  font-weight: 600;
+  height: 3rem;
+  text-align: center;
+  width: 7rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.clear-all:hover {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+.btn-container {
+  gap: 1rem;
+}
 .line {
   width: 100%;
-  height: 2px;
+  height: 0.1rem;
   background-color: var(--blue);
 }
 
 .amount-button button {
   height: 2rem;
   width: 3rem;
-  font-family: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   background-color: var(--grey);
+  color: var(--white);
+  border: none;
+  transition: all;
+  transition-duration: 0.5s;
 }
-.amount-button p {
+.amount-button button:hover {
+  background-color: black;
+}
+
+.amount-button span {
   height: 1.9rem;
   width: 3rem;
   font-family: 1rem;
@@ -90,4 +126,34 @@
   background-color: var(--white);
   border-top: 1px solid var(--grey);
   border-bottom: 1px solid var(--grey);
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+.price-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.price-head p {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.remove-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+
+.remove-btn:hover {
+  color: var(--red);
+}
+
+.no-items {
+  font-size: 2rem;
+  padding: 3rem;
+  margin: 3rem;
 }

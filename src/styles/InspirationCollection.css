@@ -22,8 +22,16 @@
   width: 28rem;
 }
 
+.one {
+  border-bottom-right-radius: 6rem;
+}
+
 .two {
   margin-bottom: 4rem;
+}
+
+.three {
+  border-top-left-radius: 6rem;
 }
 
 @media (max-width: 575px) {

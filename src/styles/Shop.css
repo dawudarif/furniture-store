@@ -7,6 +7,7 @@
   font-size: 3rem;
   color: var(--blue);
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .item img {
@@ -16,6 +17,8 @@
 
 .grid {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding-left: 10rem;
@@ -27,39 +30,27 @@
   align-items: flex-start;
   width: 17rem;
   flex-direction: column;
-  border: 1px solid var(--grey);
+  border: 2px solid var(--grey);
   padding: 0.3rem;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .item:hover {
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
 }
 
-button {
-  background-color: var(--blue);
-  height: 2.5rem;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  width: 6rem;
-  color: var(--white);
-  border: none;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
 .text-container h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
-  margin-top: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .text-container h6 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin: 0;
   margin-bottom: 0.5rem;
 }
@@ -82,23 +73,142 @@ button:hover {
   padding: 0.5rem;
   height: 1rem;
   width: auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 5px 5px solid black;
   background-color: var(--white);
-  border: 1px solid var(--grey);
+  border: 2px solid var(--grey);
   cursor: pointer;
 }
 
 .tag:hover {
-  background-color: var(--blue);
+  background-color: var(--grey);
   color: var(--white);
   transition: all;
   transition-duration: 1s;
-  border: none;
 }
 
 .bold-head {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem;
+}
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 5px;
+  }
+  .item img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .text-container h4 {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .text-container h6 {
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .item {
+    width: 10rem;
+  }
+  .shop {
+    padding: 0.5rem;
+  }
+
+  .tags {
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--grey);
+    padding: 0.5rem;
+    height: 0.8rem;
+  }
+  .cart-button,
+  .cart-button:hover,
+  .added-button,
+  .added-button:hover {
+    height: 2rem;
+    font-size: 0.6rem;
+    width: 3.5rem;
+  }
+  .shop h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .bold-head {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .item img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .text-container h4 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .text-container h6 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .bold-head {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .item img {
+    height: 12rem;
+    width: 15rem;
+  }
+  .text-container h4 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .text-container h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Large (LG) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  .item img {
+    height: 12rem;
+    width: 15rem;
+  }
 }

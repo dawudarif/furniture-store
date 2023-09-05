@@ -34,8 +34,10 @@
 
 .nav-link ul li a:hover {
   color: var(--blue);
+  font-weight: 700;
   transition: all;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
+  border-bottom: 5px solid var(--blue);
 }
 
 .cart {
