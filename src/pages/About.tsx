@@ -4,64 +4,71 @@ const About = () => {
   return (
     <div className='flex about'>
       <h1>About Us</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita ab
-        ducimus rerum magnam exercitationem recusandae debitis molestias porro
-        beatae nesciunt, perferendis dolores inventore eum quaerat voluptas
-        ipsam assumenda vitae odit. Vero magni officia error! Praesentium unde
-        rerum debitis. Facere, at! Minima illo consequuntur qui repellat
-        excepturi ab odio sint sit, eos ullam expedita ratione non molestiae.
-        Est in porro quod, necessitatibus doloribus excepturi illo tenetur
-        voluptates, repellendus minus consectetur architecto labore ipsa
-        aliquid? Molestiae, fugit sint. Voluptas cum corporis quae soluta,
-        labore sapiente? Facilis nam officia ipsam atque a, aliquid soluta
-        laboriosam sed consequuntur eos exercitationem delectus assumenda vitae
-        minima iusto officiis asperiores ab dolore modi blanditiis temporibus
-        iste, minus laborum. Esse sapiente veritatis iure deleniti accusamus
-        laboriosam eum incidunt, odit itaque error velit provident. Earum eos
-        quaerat ea aspernatur, rerum deleniti totam modi. Consectetur ipsa nulla
-        sed laudantium soluta dolorum illum quaerat est. Hic, quaerat in? Totam
-        accusamus expedita, debitis, quasi nemo eum perspiciatis omnis
-        blanditiis dolorum delectus provident pariatur vel vitae incidunt
-        consequatur vero nulla. Exercitationem quis in placeat dolor sed magnam
-        enim animi odio, iusto expedita libero distinctio repellat blanditiis
-        asperiores consectetur eius porro eos aliquam consequatur id perferendis
-        illum! Architecto quasi illum fugiat, iusto est expedita adipisci quo
-        voluptatum officiis tempora! Laudantium impedit quidem fugiat
-        consequatur necessitatibus dolore dignissimos saepe ut repellat voluptas
-        quo vero fuga, amet, id rerum nisi neque sunt eaque molestias incidunt?
-        Alias dolor distinctio molestiae quos? Sint pariatur voluptatum quisquam
-        asperiores, ipsum rem impedit tempora, totam fuga possimus ducimus
-        excepturi! Debitis fugit corrupti molestiae quis mollitia id quos sed
-        provident voluptates iusto, odit eligendi officiis facere quisquam
-        adipisci modi voluptate? Necessitatibus nostrum est ullam assumenda
-        placeat ex nobis? Eligendi eius inventore dolorem quo perferendis
-        architecto sunt, impedit magnam repellat laboriosam veniam neque vel,
-        voluptate eveniet amet atque non unde tempore maxime id illum
-        repellendus. Aliquam inventore recusandae, ducimus sed quas expedita
-        earum eveniet. Accusantium officia totam magni autem exercitationem
-        architecto perspiciatis ducimus dolores animi eveniet, ipsa recusandae
-        sint libero sunt enim aut beatae veniam amet corrupti consequatur
-        ratione. Distinctio mollitia accusamus saepe velit nostrum quos animi
-        voluptatibus natus porro sapiente quae dolorum officiis, hic veniam
-        dolores obcaecati doloremque dolorem error, asperiores possimus! Impedit
-        perspiciatis modi, similique, maxime dicta nesciunt ex alias nisi, at
-        explicabo natus cumque! Odio quaerat nobis neque autem culpa eum
-        reiciendis reprehenderit alias, maxime fuga ab esse dolor voluptatum?
-        Animi exercitationem, eos architecto, rerum aliquid accusantium dolorem,
-        rem blanditiis atque natus aperiam ipsa. Eum dolor sunt ratione vel
-        magni, nam error odio quaerat quos id magnam culpa voluptatibus
-        possimus. Dolorem repudiandae quas tenetur placeat dolore ex accusantium
-        voluptate voluptas sint. Fuga accusamus consequuntur dignissimos,
-        suscipit veritatis atque distinctio dolorem autem voluptate in
-        necessitatibus eius, aliquid pariatur optio alias tenetur dicta ipsa
-        sapiente nobis facere officiis odit minus? Quas explicabo a, autem eos
-        quae beatae iusto consequuntur ea pariatur, impedit error, quidem
-        blanditiis iure molestiae odio ipsum. A, ducimus reiciendis possimus ad
-        quisquam qui maiores incidunt! Consequuntur accusantium mollitia ex
-        laudantium reprehenderit maiores deserunt id laborum quos? Minus,
-        veritatis nihil.
-      </p>
+      <div>
+        <h4>
+          About <b>Furniture Store</b>
+        </h4>
+        <p>
+          Welcome to <b>Furniture Store</b>, where we believe that your home is
+          a reflection of your unique style and personality. With a passion for
+          craftsmanship and a commitment to quality, we have been helping
+          customers create beautiful living spaces for more than <b>30 </b>
+          years.
+        </p>
+        <h4>Our Story</h4>
+        <p>
+          Founded in <b>1989</b>, our journey began with a simple goal: to
+          provide high-quality, stylish, and affordable furniture that brings
+          comfort and elegance into your home. Over the years, we have grown
+          from a small local store to a trusted destination for furniture
+          enthusiasts.
+        </p>
+        <h4>Quality Craftsmanship</h4>
+        <p>
+          At <b>Furniture Store</b>, we take pride in the quality of our
+          furniture. Each piece is crafted with precision and care by skilled
+          artisans who understand the art of furniture making. We source the
+          finest materials to ensure durability and longevity, so your furniture
+          remains a cherished part of your life for years to come.
+        </p>
+        <h4>Diverse Selection</h4>
+        <p>
+          Explore our extensive collection of furniture that caters to every
+          taste and lifestyle. From classic and timeless designs to modern and
+          contemporary styles, we offer a diverse range of options to match your
+          preferences. Whether you're furnishing a cozy apartment or decorating
+          a spacious home, you'll find the perfect pieces to suit your needs.
+        </p>
+        <h4>Customer-Centric Approach</h4>
+        <p>
+          Our customers are at the heart of everything we do. We are committed
+          to providing an exceptional shopping experience, from the moment you
+          step into our showroom or browse our website to the delivery of your
+          furniture. Our knowledgeable and friendly staff are here to assist you
+          in making the right choices for your home.
+        </p>
+        <h4>Sustainability</h4>
+        <p>
+          We care about our planet and believe in responsible furniture
+          production. Many of our products are crafted using eco-friendly
+          materials and sustainable practices. By choosing furniture from{' '}
+          <b>Furniture Store</b>, you not only enhance your living space but
+          also contribute to a greener future.
+        </p>
+        <h4>Visit Us</h4>
+        <p>
+          We invite you to visit our showroom, where you can see and feel the
+          quality of our furniture firsthand. Our dedicated team is here to help
+          you with any questions or design ideas you may have. Whether you're
+          starting a new home project or looking for that one perfect piece, we
+          are here to inspire and assist you.
+        </p>
+        <p>
+          Thank you for considering <b>Furniture Store</b> for your furniture
+          needs. We look forward to being a part of your home furnishing journey
+          and helping you create spaces that reflect your style and comfort.
+        </p>
+      </div>
     </div>
   );
 };

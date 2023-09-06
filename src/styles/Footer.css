@@ -9,12 +9,13 @@ footer {
 
 .img-map {
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .img-map img {
   border-radius: 5px;
-  height: 14rem;
-  width: 14rem;
+  height: 12rem;
+  width: 12rem;
 }
 
 .beauty h4,
@@ -54,6 +55,10 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  .img-map img {
+    height: 10rem;
+    width: 10rem;
+  }
   .beauty-parent {
     width: 100%;
   }
@@ -72,6 +77,10 @@ footer {
   .img-map {
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+  .img-map img {
+    height: 10rem;
+    width: 10rem;
   }
   .beauty-parent {
     width: 100%;
@@ -94,7 +103,6 @@ footer {
   .beauty-parent {
     width: 100%;
   }
-
   .ig-shop {
     width: 100%;
   }
@@ -104,5 +112,9 @@ footer {
 @media (min-width: 992px) and (max-width: 1199px) {
   .img-map {
     flex-wrap: wrap;
+  }
+  .img-map img {
+    height: 12rem;
+    width: 12rem;
   }
 }

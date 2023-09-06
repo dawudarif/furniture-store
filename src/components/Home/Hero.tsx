@@ -7,8 +7,8 @@ const Hero = () => {
         <h5>New Arrival</h5>
         <h1>Discover Our New Collection</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-          repudiandae perferendis libero, illo nam
+          Explore the Latest Trends and Timeless Classics to Elevate Your Home
+          Decor
         </p>
         <button>BUY NOW</button>
       </div>

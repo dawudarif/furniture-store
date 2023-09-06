@@ -1,35 +1,30 @@
 .row-item {
-  outline: 2px solid rgba(0, 0, 0, 0.205);
+  outline: 2px solid var(--border-grey);
   cursor: pointer;
   transition: all 0.15s ease-in;
+  height: max-content;
+  width: 16rem;
+  padding: 1rem;
 }
 
 .row-item:hover {
-  outline: 2px solid rgba(0, 0, 0, 0.6);
+  outline: 2px solid var(--border-hover);
 }
 
 .trending {
   padding-bottom: 10rem;
 }
 
-.item-header img {
-  width: 21rem;
-}
-
-.item-description {
-  font-size: 1.7rem;
-  padding: 1rem;
-}
-
 .trending h3 {
   font-size: 2.6rem;
   font-weight: 600;
-  margin-bottom: 4.2rem !important;
+  margin-bottom: 4.2rem;
 }
 
 .row-container {
   display: flex;
   gap: 2.2rem;
+  width: 80%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -71,4 +66,46 @@
 
 .btns button:hover {
   background-color: black;
+}
+
+.item-1 {
+  display: flex;
+  align-items: flex-start;
+  width: 14rem;
+  flex-direction: column;
+  border: 2px solid var(--border-grey);
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.item-1:hover {
+  border: 2px solid var(--border-hover);
+  display: flex;
+}
+
+.item-1 img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.text-container-1 h4 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-container-1 h6 {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.text-container-1 p {
+  color: var(--grey);
+  font-size: medium;
+  height: 3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

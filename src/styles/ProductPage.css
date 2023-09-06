@@ -1,21 +1,19 @@
 .product-page {
-  justify-content: flex-start;
   align-items: flex-start;
-  padding: 7rem;
-  gap: 5rem;
+  padding: 4rem;
+  gap: 2rem;
 }
 
 .img-parent {
   flex-direction: column;
   justify-content: flex-start;
   gap: 3rem;
+  width: max-content;
 }
 
 .img-parent img {
   height: 30rem;
-  width: 30rem;
-  border: 2px solid var(--grey);
-  border-spacing: 1rem;
+  width: 32rem;
 }
 
 .img-child {
@@ -33,7 +31,7 @@
   background-color: var(--bg-grey);
   color: var(--black);
   padding: 3rem;
-  height: 30rem;
+  height: 29rem;
   width: 35rem;
   position: relative;
 }
@@ -73,7 +71,7 @@
   gap: 3rem;
   margin-top: 4rem;
   position: absolute;
-  bottom: 14rem;
+  bottom: 12rem;
 }
 
 .price {
@@ -128,4 +126,72 @@
   background-color: var(--white);
   color: var(--red);
   border: 2px solid var(--red);
+}
+
+.texture-box {
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.texture-box span {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--bg-grey);
+  color: var(--black);
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.texture-box span h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+.texture-box span p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  /* Your CSS rules for mobile devices in portrait mode */
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Your CSS rules for mobile devices in landscape mode and small tablets */
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-page {
+    flex-direction: column;
+  }
+}
+
+/* Large (LG) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .procuct-page {
+    padding: 3rem;
+    gap: 1rem;
+  }
+  .img-parent img {
+    width: 28rem;
+    border-spacing: 0;
+  }
+  .details-container {
+    width: 30rem;
+    padding: 2rem;
+  }
+  .img-child img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .texture-box span {
+    padding: 1rem;
+    width: 8rem;
+  }
 }

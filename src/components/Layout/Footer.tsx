@@ -15,13 +15,17 @@ const Footer = () => {
         <span className='beauty'>
           <h4>Beauty Care</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            cumque officiis magni voluptate! Id, cum! Asperiores totam sed
-            ducimus vero quaerat fugiat erferendis quam rem nemo, ex placeat
-            obcaecati minus cumque officiis magni voluptate! Id, cum! Asperiores
-            totam sed ducimus vero quaerat fugiat erferendis quam rem nemo, ex
-            placeat obcaecati minus cumque officiis magni voluptate! Id, cum!
-            Asperiores totam sed ducimus vero quaerat fugiat.
+            Preserving the beauty of your furniture starts with regular care and
+            attention. Dusting and cleaning your pieces regularly with a soft,
+            lint-free cloth helps prevent dust buildup and maintains their
+            shine. Avoid placing furniture in direct sunlight or near heating
+            vents to prevent fading and drying out. Use coasters and placemats
+            to protect surfaces from spills and scratches. For wood furniture,
+            periodic polishing with a quality wood cleaner or conditioner keeps
+            the finish vibrant. Upholstered pieces benefit from vacuuming and
+            spot cleaning to remove dirt and stains. With proper care, your
+            furniture will continue to grace your home with comfort and style
+            for years to come.
           </p>
         </span>
         <span className='follow'>

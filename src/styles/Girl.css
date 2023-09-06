@@ -7,11 +7,11 @@
 
 .image-section {
   position: relative;
-  width: 30%;
+  width: 35%;
 }
 
 .image-section img {
-  height: 38rem;
+  height: 36rem;
   width: 25rem;
   border-top-left-radius: 50px;
   border-top-right-radius: 12px;
@@ -22,8 +22,8 @@
 }
 
 .sphere {
-  width: 20rem;
-  height: 20rem;
+  width: 19rem;
+  height: 19rem;
   background-color: #09513b;
   border-radius: 50%;
   position: absolute;
@@ -140,7 +140,7 @@
     width: 20rem;
   }
   .sphere {
-    width: 16rem;
-    height: 16rem;
+    width: 14rem;
+    height: 14rem;
   }
 }

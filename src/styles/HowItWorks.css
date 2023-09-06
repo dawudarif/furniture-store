@@ -22,8 +22,8 @@
 }
 
 .img-container img {
-  width: 25rem;
-  height: 25rem;
+  width: 22rem;
+  height: 22rem;
   display: block;
   border-radius: 10px;
 }
@@ -71,8 +71,8 @@
     flex-wrap: wrap;
   }
   .img-container img {
-    width: 18rem;
-    height: 18rem;
+    width: 20rem;
+    height: 20rem;
   }
 }
 
@@ -82,8 +82,8 @@
     flex-wrap: wrap;
   }
   .img-container img {
-    width: 20rem;
-    height: 20rem;
+    width: 22rem;
+    height: 22rem;
   }
 }
 
@@ -91,6 +91,9 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .img-works {
     flex-wrap: wrap;
+  }
+  .img-container {
+    gap: 1rem;
   }
   .img-container img {
     width: 22rem;
@@ -100,9 +103,12 @@
 
 /* Large (LG) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Your CSS rules for most desktop and laptop screens */
+  /* Your CSS rules for most desktop and laptop screens*/
+  .text-container h1 {
+    white-space: nowrap;
+  }
   .img-container img {
-    width: 24rem;
-    height: 24rem;
+    width: 18rem;
+    height: 20rem;
   }
 }

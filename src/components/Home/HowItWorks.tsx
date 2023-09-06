@@ -6,7 +6,10 @@ const HowItWorks = () => {
     <section className='section-works flex'>
       <div className='text-works flex'>
         <h1>How It Works</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          Learn about our seamless ordering process and delivery methods,
+          ensuring a hassle-free experience
+        </p>
       </div>
       <div className='img-works flex'>
         {HowItWorksData.map((item) => (

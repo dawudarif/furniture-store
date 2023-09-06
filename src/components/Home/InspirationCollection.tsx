@@ -7,7 +7,10 @@ const InspirationCollection = () => {
   return (
     <section className='flex ic-section'>
       <h1>Inspiration Collection</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>
+        Elevate Your Space with Pieces that Inspire and Reflect Your Unique
+        Style
+      </p>
       <div className='flex f-img'>
         <img src={IC3} alt='img' className='three' />
         <img src={IC2} alt='img' className='two' />

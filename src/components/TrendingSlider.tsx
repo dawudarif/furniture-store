@@ -1,15 +1,16 @@
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 import '../styles/TrendingSlider.css';
 import TrendingItem from './TrendingItems';
 
 function TrendingSlider() {
   const slideLeft = () => {
     let slider: any = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft - 235;
+    slider.scrollLeft = slider.scrollLeft - 400;
   };
 
   const slideRight = () => {
     let slider: any = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft + 235;
+    slider.scrollLeft = slider.scrollLeft + 400;
   };
 
   return (
@@ -18,11 +19,11 @@ function TrendingSlider() {
         <div className='title-btns'>
           <h3>Trending Now</h3>
           <div className='btns'>
-            <button title='scroll left' onClick={slideLeft}>
-              left{' '}
+            <button title='scroll left' onClick={() => slideLeft()}>
+              <FaArrowLeft size={20} />
             </button>
-            <button title='scroll right' onClick={slideRight}>
-              right
+            <button title='scroll right' onClick={() => slideRight()}>
+              <FaArrowRight size={20} />
             </button>
           </div>
         </div>

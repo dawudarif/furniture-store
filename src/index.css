@@ -8,6 +8,8 @@
   --bg-blue: #dfe9f4;
   --bg-grey: #e5e5e5;
   --red: #b6002c;
+  --border-grey: rgba(0, 0, 0, 0.205);
+  --border-hover: rgba(0, 0, 0, 0.6);
 }
 
 body {

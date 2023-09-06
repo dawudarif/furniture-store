@@ -6,19 +6,19 @@ export const iconsData = [
   {
     id: 1,
     title: 'Free Delivery',
-    desc: 'lorem ipsum dolor sit amet',
+    desc: 'Free shipping on orders',
     img: deliver,
   },
   {
     id: 2,
     title: 'Support 24/7',
-    desc: 'lorem ipsum dolor sit amet',
+    desc: '24/7 customer assistance',
     img: twentyFour,
   },
   {
     id: 3,
     title: '100% Authentic',
-    desc: 'lorem ipsum dolor sit amet',
+    desc: 'Genuine, durable quality',
     img: sheild,
   },
 ];

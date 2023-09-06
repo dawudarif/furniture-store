@@ -11,7 +11,7 @@ const Contact = () => {
         <p>You can reach us out through these channels</p>
       </span>
       <span className='flex contact-body'>
-        <span>
+        <span className='flex email-box'>
           <h4>Email</h4>
           <span className='flex email'>
             <MdEmail size={50} />

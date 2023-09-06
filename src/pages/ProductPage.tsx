@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopData } from '../components/Data/ShopData';
 import TrendingItem from '../components/TrendingItems';
+import TrendingSlider from '../components/TrendingSlider';
 import '../styles/ProductPage.css';
 
 const ProductPage = () => {
@@ -99,57 +100,74 @@ const ProductPage = () => {
             ))}
           </div>
         </div>
-        <div className='details-container'>
-          <h1>{item?.title}</h1>
-          <h3>{item?.desc}</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            incidunt rerum sint distinctio est placeat natus, rem veritatis
-            numquam earum libero. Tempora accusamus ea at nostrum harum
-            cupiditate animi sequi quod, minus eius. Minus veniam repellat
-            corporis quidem
-          </p>
-          <div className='quantity-box flex'>
-            <h3>Quantity:</h3>
-            <span className='value-buttons flex'>
-              <button
-                className='minus'
-                onClick={() => handleQuantityChange(-1)}
-              >
-                -
-              </button>
-              <p className='flex'>{itemQuantity}</p>
-              <button className='plus' onClick={() => handleQuantityChange(1)}>
-                +
-              </button>
-            </span>
-          </div>
-          <h6 className='price'>${Number(item?.price) * itemQuantity}</h6>
-          <div className='button-box flex'>
-            <button className='buy-button'>BUY</button>
-            {cartIds.includes(Number(item?.id)) ? (
-              <button
-                onClick={() => removeCartItem(Number(item?.id))}
-                className='added-button'
-              >
-                Added
-              </button>
-            ) : (
-              addCartValues && (
+        <div>
+          <div className='details-container'>
+            <h1>{item?.title}</h1>
+            <h3>{item?.desc}</h3>
+            <p>
+              lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              incidunt rerum sint distinctio est placeat natus, rem veritatis
+              numquam earum libero. Tempora accusamus ea
+            </p>
+            <div className='quantity-box flex'>
+              <h3>Quantity:</h3>
+              <span className='value-buttons flex'>
                 <button
-                  onClick={() =>
-                    addToCart({ ...addCartValues, quantity: itemQuantity })
-                  }
-                  className='cart-button'
+                  className='minus'
+                  onClick={() => handleQuantityChange(-1)}
                 >
-                  Add To Cart
+                  -
                 </button>
-              )
-            )}
+                <p className='flex'>{itemQuantity}</p>
+                <button
+                  className='plus'
+                  onClick={() => handleQuantityChange(1)}
+                >
+                  +
+                </button>
+              </span>
+            </div>
+            <h6 className='price'>${Number(item?.price) * itemQuantity}</h6>
+            <div className='button-box flex'>
+              <button className='buy-button'>BUY</button>
+              {cartIds.includes(Number(item?.id)) ? (
+                <button
+                  onClick={() => removeCartItem(Number(item?.id))}
+                  className='added-button'
+                >
+                  Added
+                </button>
+              ) : (
+                addCartValues && (
+                  <button
+                    onClick={() =>
+                      addToCart({ ...addCartValues, quantity: itemQuantity })
+                    }
+                    className='cart-button'
+                  >
+                    Add To Cart
+                  </button>
+                )
+              )}
+            </div>
+          </div>
+          <div className='texture-box flex'>
+            <span>
+              <h1>Texture</h1>
+              <p>{item?.texture}</p>
+            </span>
+            <span>
+              <h1>Weight</h1>
+              <p>{item?.weight}</p>
+            </span>
+            <span>
+              <h1>Dimensions</h1>
+              <p>{item?.dimensions}</p>
+            </span>
           </div>
         </div>
       </section>
-      <TrendingItem />
+      <TrendingSlider />
     </>
   );
 };

@@ -7,7 +7,10 @@ const BrowseRange = () => {
       <section className='browse-range flex'>
         <div className='heading flex'>
           <h1>Browse The Range</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p>
+            Explore our wide selection of furniture and accessories to find the
+            perfect pieces for your home
+          </p>
         </div>
         <div className='flex img-div'>
           {BrowseRangeData.map((item) => (

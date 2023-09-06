@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ShopData } from './Data/ShopData';
 import '../styles/TrendingSlider.css';
 
@@ -7,20 +6,13 @@ function TrendingItem() {
   return (
     <>
       {filteredItems.map((item) => (
-        <div key={item.id} className='row-item'>
-          <Link
-            // onClick={() => window.top(0)}
-            to={`/categories/product/${item.id}`}
-          >
-            <div className='item-header'>
-              <img src={item.img[0]} alt='product' />
-            </div>
-            <div className='item-description'>
-              <p>{item.desc}</p>
-              <p className='item-price'>{item.price}$</p>
-            </div>
-          </Link>
-        </div>
+        <a href={`/shop/${item.id}`} key={item.id} className='item-1'>
+          <img src={item.img[0]} alt={item.title} />
+          <div className='text-container-1'>
+            <h4>{item.title}</h4>
+            <h6>${item.price}</h6>
+          </div>
+        </a>
       ))}
     </>
   );

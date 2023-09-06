@@ -4,27 +4,28 @@ import { RxCross2 } from 'react-icons/rx';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState<null | Array<any>>(null);
-  const [totalPrice, setTotalPrice] = useState<null | number>(null);
+  // const [totalPrice, setTotalPrice] = useState<number>(0);
 
   const getCartItems = () => {
     const storedCart = localStorage.getItem('cart');
+    // console.log(storedCart);
+
     if (storedCart) {
       setCartItems(JSON.parse(storedCart));
-      calculateTotalPrice();
+      // calculateTotalPrice();
     }
   };
 
   const calculateTotalPrice = () => {
+    console.log('render');
+    let total = 0;
     if (cartItems && cartItems.length > 0) {
-      const total = cartItems.reduce((total, item) => {
+      total = cartItems.reduce((total, item) => {
         return total + parseFloat(item.price) * item.quantity;
       }, 0);
-
-      const reduced = total.toFixed(2);
-      setTotalPrice(reduced);
-    } else {
-      setTotalPrice(0.0);
     }
+    const reduced = total.toFixed(2);
+    return reduced;
   };
 
   const itemQuantity = (item: any, newQuantity: any) => {
@@ -56,12 +57,13 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    const getAndCalculateCartItems = () => {
-      getCartItems();
-    };
-
-    getAndCalculateCartItems();
+    getCartItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  // useEffect(() => {
+  //   calculateTotalPrice();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <div className='cart-container'>
@@ -81,7 +83,9 @@ const Cart = () => {
                     <div className='item-details'>
                       <h3>{item.title}</h3>
                       <p>Price: ${item.price}</p>
-                      <p>Subtotal: ${item.price * item.quantity}</p>
+                      <p>
+                        Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                      </p>
                       <span className='flex amount-button'>
                         <button
                           className='flex'
@@ -114,7 +118,7 @@ const Cart = () => {
       <div className='cart-footer'>
         <div className='line'></div>
         <div className='price-head'>
-          <p>Total: ${totalPrice}</p>
+          <p>Total: ${calculateTotalPrice()}</p>
           <div className='btn-container flex'>
             <button className='clear-all' onClick={clearAll}>
               Clear All

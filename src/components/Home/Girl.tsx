@@ -7,10 +7,9 @@ const Girl = () => {
       <div className='text-section'>
         <h1>Beautify Your Space</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
-          cupiditate, possimus animi, incidunt amet molestias quisquam earum
-          recusandae ducimus facere eos deleniti harum itaque maiores officiis
-          magni enim omnis natus!
+          Discover a World of Possibilities: Elevate Your Living Spaces with Our
+          Exquisite Furniture Collections. Explore Timeless Designs and
+          Unmatched Comfort for Your Home.
         </p>
         <button>Learn more</button>
       </div>
