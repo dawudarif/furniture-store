@@ -206,6 +206,11 @@
     width: 35%;
     height: 4rem;
   }
+  .button-box button {
+    width: 45%;
+    height: 3rem;
+    margin: auto;
+  }
 }
 
 /* Small (SM) */
@@ -238,6 +243,11 @@
   .texture-box span {
     padding: 1rem;
   }
+  .button-box button {
+    width: 45%;
+    height: 3rem;
+    margin: auto;
+  }
 }
 
 /* Medium (MD) */
@@ -266,6 +276,17 @@
   }
   .texture-box span {
     padding: 1rem;
+  }
+  .button-box button {
+    width: 40%;
+    height: 3rem;
+  }
+  .buy-button {
+    margin-left: auto;
+  }
+  .added-button,
+  .cart-button {
+    margin-right: auto;
   }
 }
 

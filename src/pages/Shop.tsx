@@ -1,7 +1,6 @@
 import '../styles/Shop.css';
 import { ShopData } from '../components/Data/ShopData';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const Shop = () => {
   const [displayTags, setDisplayTags] = useState<string[]>(['All']);

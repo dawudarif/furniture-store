@@ -5,6 +5,7 @@ import About from './pages/About';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import ProductPage from './pages/ProductPage';
 import Shop from './pages/Shop';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='shop' element={<Shop />} />
         <Route path='cart' element={<Cart />} />
         <Route path='/shop/:id' element={<ProductPage />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </>
