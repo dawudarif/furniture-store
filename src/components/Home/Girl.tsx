@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import girlPic from '../../assets/girl.svg';
 import '../../styles/Girl.css';
 
@@ -11,7 +12,9 @@ const Girl = () => {
           Exquisite Furniture Collections. Explore Timeless Designs and
           Unmatched Comfort for Your Home.
         </p>
-        <button>Learn more</button>
+        <Link to='/about'>
+          <button>Learn more</button>
+        </Link>
       </div>
       <div className='image-section'>
         <img src={girlPic} alt='girl' />

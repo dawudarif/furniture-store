@@ -32,7 +32,7 @@
 }
 
 /* Small (SM) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 767px) {
   .about {
     flex-direction: column;
     padding: 2rem;
@@ -44,7 +44,7 @@
 }
 
 /* Medium (MD) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 991px) {
   .about {
     flex-direction: column;
     padding: 3rem;

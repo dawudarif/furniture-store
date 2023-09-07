@@ -11,19 +11,16 @@
   outline: 2px solid var(--border-hover);
 }
 
-.trending {
-  padding-bottom: 10rem;
-}
-
-.trending h3 {
-  font-size: 2.6rem;
+.title-btns h3 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 4.2rem;
+  margin-bottom: 1rem;
 }
 
 .row-container {
   display: flex;
-  gap: 2.2rem;
+  gap: 1rem;
   width: 80%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -45,16 +42,17 @@
 .title-btns {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 .btns button {
   color: white;
   background-color: #373737;
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
   border: none;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   cursor: pointer;
   transition: all 0.1s ease-in;
 }
@@ -71,7 +69,7 @@
 .item-1 {
   display: flex;
   align-items: flex-start;
-  width: 14rem;
+  width: 12rem;
   flex-direction: column;
   border: 2px solid var(--border-grey);
   padding: 1rem;
@@ -85,8 +83,8 @@
 }
 
 .item-1 img {
-  height: 15rem;
-  width: 15rem;
+  height: 12rem;
+  width: 12rem;
 }
 
 .text-container-1 h4 {
@@ -98,14 +96,88 @@
 }
 
 .text-container-1 h6 {
-  font-size: 0.9rem;
+  display: flex;
+  font-size: 1rem;
   margin: 0;
   margin-bottom: 0.5rem;
 }
-.text-container-1 p {
-  color: var(--grey);
-  font-size: medium;
-  height: 3rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .item-1 {
+    width: 8rem;
+  }
+
+  .item-1 img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .text-container-1 h4 {
+    font-size: 1rem;
+  }
+
+  .text-container-1 h6 {
+    font-size: 1rem;
+  }
+  .title-btns h3 {
+    font-size: 1.4rem;
+  }
+  .btns button {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 575px) and (max-width: 767px) {
+  .item-1 {
+    width: 8rem;
+  }
+  .item-1 img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .text-container-1 h4 {
+    font-size: 1rem;
+  }
+
+  .text-container-1 h6 {
+    font-size: 1rem;
+  }
+  .title-btns h3 {
+    font-size: 1.4rem;
+  }
+  .btns button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+/* Medium (MD) */
+@media (min-width: 767px) and (max-width: 991px) {
+  .item-1 {
+    width: 10rem;
+  }
+
+  .item-1 img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .text-container-1 h4 {
+    font-size: 1rem;
+  }
+
+  .text-container-1 h6 {
+    font-size: 1rem;
+  }
+  .title-btns h3 {
+    font-size: 1.4rem;
+  }
+  .btns button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }

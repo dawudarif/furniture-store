@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+
 import { useParams } from 'react-router-dom';
 import { ShopData } from '../components/Data/ShopData';
-import TrendingItem from '../components/TrendingItems';
 import TrendingSlider from '../components/TrendingSlider';
+import { setCartData, setLength } from '../features/cartSlice';
+
 import '../styles/ProductPage.css';
 
 const ProductPage = () => {
@@ -13,6 +17,7 @@ const ProductPage = () => {
   const [cartItems, setCartItems] = useState<Array<CartData>>([]);
   const [itemQuantity, setItemQuantity] = useState<number>(1);
   const [addCartValues, setAddCartValues] = useState<any>();
+  const dispatch = useDispatch();
 
   const getItem = async () => {
     try {
@@ -37,7 +42,10 @@ const ProductPage = () => {
   const getCartItems = () => {
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
+      let parsedData = JSON.parse(storedCart);
+      setCartItems(parsedData);
+      dispatch(setCartData(parsedData));
+      dispatch(setLength(parsedData.length));
     }
   };
 
@@ -46,8 +54,6 @@ const ProductPage = () => {
   });
 
   const addToCart = (addCartValues: CartData) => {
-    console.log(addCartValues);
-
     if (addCartValues) {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
       cart.push(addCartValues);
@@ -61,6 +67,7 @@ const ProductPage = () => {
     const updatedCart = storedCart.filter((item: any) => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
     setCartItems(updatedCart);
+    dispatch(setLength(updatedCart.length));
   };
 
   const handleQuantityChange = (num: number) => {
@@ -100,7 +107,7 @@ const ProductPage = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div className='details-box'>
           <div className='details-container'>
             <h1>{item?.title}</h1>
             <h3>{item?.desc}</h3>
@@ -127,7 +134,9 @@ const ProductPage = () => {
                 </button>
               </span>
             </div>
-            <h6 className='price'>${Number(item?.price) * itemQuantity}</h6>
+            <h6 className='price'>
+              ${(Number(item?.price) * itemQuantity).toFixed(2)}
+            </h6>
             <div className='button-box flex'>
               <button className='buy-button'>BUY</button>
               {cartIds.includes(Number(item?.id)) ? (

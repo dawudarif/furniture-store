@@ -1,23 +1,27 @@
 import { useEffect, useState } from 'react';
 import '../styles/Cart.css';
 import { RxCross2 } from 'react-icons/rx';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux/es/exports';
+import { setLength, setCartData } from '../features/cartSlice';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState<null | Array<any>>(null);
-  // const [totalPrice, setTotalPrice] = useState<number>(0);
+  const { cartData } = useSelector((store: any) => store.cart);
+  const [cartItems, setCartItems] = useState<null | Array<any>>(cartData);
+  const dispatch = useDispatch();
 
-  const getCartItems = () => {
-    const storedCart = localStorage.getItem('cart');
-    // console.log(storedCart);
+  console.log(cartItems);
 
-    if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
-      // calculateTotalPrice();
+  const getCartItems = async () => {
+    let data = cartData;
+    if (cartData === undefined || cartData.length === 0) {
+      setCartItems(null);
+    } else {
+      setCartItems(data);
     }
   };
 
   const calculateTotalPrice = () => {
-    console.log('render');
     let total = 0;
     if (cartItems && cartItems.length > 0) {
       total = cartItems.reduce((total, item) => {
@@ -46,24 +50,25 @@ const Cart = () => {
     localStorage.removeItem('cart');
     setCartItems(null);
     calculateTotalPrice();
+    dispatch(setCartData(null));
+    dispatch(setLength(0));
   };
 
   const removeCartItem = (id: number) => {
     const storedCart = JSON.parse(localStorage.getItem('cart') || '[]');
     const updatedCart = storedCart.filter((item: any) => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+
     setCartItems(updatedCart);
     calculateTotalPrice();
+    dispatch(setCartData(updatedCart));
+    dispatch(setLength(updatedCart.length));
   };
 
   useEffect(() => {
     getCartItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // useEffect(() => {
-  //   calculateTotalPrice();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
 
   return (
     <div className='cart-container'>
@@ -82,10 +87,14 @@ const Cart = () => {
                     <img src={item.img} alt={item.title} />
                     <div className='item-details'>
                       <h3>{item.title}</h3>
-                      <p>Price: ${item.price}</p>
-                      <p>
-                        Subtotal: ${(item.price * item.quantity).toFixed(2)}
-                      </p>
+                      <span className='price-span'>
+                        <b>Price:</b>
+                        <p>${item.price}</p>
+                      </span>
+                      <span className='price-span'>
+                        <b>Subtotal:</b>
+                        <p>${(item.price * item.quantity).toFixed(2)}</p>
+                      </span>
                       <span className='flex amount-button'>
                         <button
                           className='flex'
@@ -120,10 +129,10 @@ const Cart = () => {
         <div className='price-head'>
           <p>Total: ${calculateTotalPrice()}</p>
           <div className='btn-container flex'>
-            <button className='clear-all' onClick={clearAll}>
+            <button className='clear-all flex' onClick={clearAll}>
               Clear All
             </button>
-            <button className='checkout-button'>Checkout</button>
+            <button className='checkout-button flex'>Checkout</button>
           </div>
         </div>
       </div>

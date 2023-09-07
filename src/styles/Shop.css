@@ -44,7 +44,7 @@
 .text-container h4 {
   font-size: 1rem;
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -94,7 +94,7 @@
 }
 
 /* Extra Small (XS) */
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
@@ -123,13 +123,10 @@
   .tags {
     gap: 0.5rem;
   }
-
   .tag {
     font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--grey);
     padding: 0.5rem;
-    height: 0.8rem;
+    height: 0.6rem;
   }
   .cart-button,
   .cart-button:hover,
@@ -155,21 +152,25 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .item img {
     height: 10rem;
     width: 10rem;
   }
   .item {
-    width: 11rem;
+    width: 10rem;
   }
   .text-container h4 {
     font-size: 1rem;
     margin-top: 0.5rem;
   }
-
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    height: 0.6rem;
+  }
   .text-container h6 {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
@@ -188,11 +189,11 @@
   }
   .item img {
     height: 12rem;
-    width: 13rem;
+    width: 12rem;
   }
 
   .item {
-    width: 13rem;
+    width: 12rem;
   }
   .text-container h4 {
     font-size: 1.2rem;
@@ -206,7 +207,7 @@
 }
 
 /* Large (LG) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;

@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 4rem;
   margin-bottom: 20px;
   position: relative;
 }
@@ -40,17 +40,29 @@
 
 .item-details {
   margin-top: 1rem;
-}
-
-.item-details h3,
-.item-details p {
+  margin-right: 1rem;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  font-size: 1rem;
-  margin: 0.5rem;
+  flex-direction: column;
 }
 
+.item-details h3 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.price-span {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.price-span p {
+  margin: 0.2rem;
+}
 .cart-footer {
   display: flex;
   flex-direction: column;
@@ -156,4 +168,76 @@
   font-size: 2rem;
   padding: 3rem;
   margin: 3rem;
+}
+
+/* Extra Small (XS) */
+@media (max-width: 575px) {
+  .cart-item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .item-details h3 {
+    font-size: 1rem;
+  }
+  .cart-container {
+    padding: 0.5rem;
+    margin-top: 2rem;
+  }
+  .cart-header h2 {
+    font-size: 2rem;
+  }
+  .price-head {
+    padding: 0.5rem;
+  }
+  .price-head p {
+    font-size: 1rem;
+  }
+  .clear-all {
+    height: 2rem;
+    width: 6rem;
+  }
+  .checkout-button {
+    height: 2.2rem;
+    width: 6rem;
+  }
+  .cart-item img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cart-item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .item-details h3 {
+    font-size: 1rem;
+  }
+  .cart-container {
+    padding: 0.5rem;
+    margin-top: 3rem;
+  }
+  .cart-header h2 {
+    font-size: 2rem;
+  }
+  .price-head {
+    padding: 0.5rem;
+  }
+  .price-head p {
+    font-size: 1rem;
+  }
+  .clear-all {
+    height: 2rem;
+    width: 6rem;
+  }
+  .checkout-button {
+    height: 2.2rem;
+    width: 6rem;
+  }
+  .cart-item img {
+    width: 6rem;
+    height: 6rem;
+  }
 }

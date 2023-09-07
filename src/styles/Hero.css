@@ -52,6 +52,14 @@
   width: 10rem;
   border: none;
   border-radius: 30px;
+  cursor: pointer;
+}
+.hero-child button:hover {
+  background-color: var(--bg-blue);
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  transition: all;
+  transition-duration: 0.4s;
 }
 
 /* Extra Small (XS) */

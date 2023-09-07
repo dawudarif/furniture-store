@@ -126,7 +126,7 @@ export const ShopData: ShopData[] = [
     weight: getRandomWeight(),
     dimensions: getRandomDimensions(),
     type: 'table',
-    price: '14.99',
+    price: '19.99',
   },
   {
     id: 8,

@@ -77,7 +77,7 @@
 }
 
 /* Small (SM) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 767px) {
   .img-works {
     flex-wrap: wrap;
   }
@@ -88,7 +88,7 @@
 }
 
 /* Medium (MD) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 991px) {
   .img-works {
     flex-wrap: wrap;
   }
@@ -102,7 +102,7 @@
 }
 
 /* Large (LG) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
   /* Your CSS rules for most desktop and laptop screens*/
   .text-container h1 {
     white-space: nowrap;

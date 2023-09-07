@@ -4,19 +4,16 @@ import '../../styles/Navbar.css';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [view, setView] = useState<boolean>(false);
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const { length } = useSelector((store: any) => store.cart);
 
   return (
     <>
       <nav className='navbar flex-between'>
-        <div className='logo' onClick={scrollToTop}>
-          Furniture
-        </div>
+        <div className='logo'>Furniture</div>
         <div className='flex'>
           <div className='nav-link'>
             <ul className='flex'>
@@ -34,7 +31,10 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to='/cart'>
-                  <HiOutlineShoppingBag size={30} />
+                  <div className='cart-parent'>
+                    <HiOutlineShoppingBag size={30} />
+                    <div className='cart-child flex'>{length}</div>
+                  </div>
                 </Link>
               </li>
             </ul>
@@ -42,7 +42,10 @@ const Navbar = () => {
 
           <div className='sandwich'>
             <Link to='/cart'>
-              <HiOutlineShoppingBag size={30} />
+              <div className='cart-parent'>
+                <HiOutlineShoppingBag size={30} />
+                <div className='cart-child flex'>{length}</div>
+              </div>
             </Link>
             <GiHamburgerMenu onClick={() => setView(true)} size={30} />
           </div>
@@ -58,16 +61,24 @@ const Navbar = () => {
         />
         <ul className='flex'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link onClick={() => setView(false)} to='/'>
+              Home
+            </Link>
           </li>
           <li>
-            <a href='/shop'>Shop</a>
+            <a onClick={() => setView(false)} href='/shop'>
+              Shop
+            </a>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <Link onClick={() => setView(false)} to='/about'>
+              About
+            </Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link onClick={() => setView(false)} to='/contact'>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

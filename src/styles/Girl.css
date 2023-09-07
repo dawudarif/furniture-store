@@ -55,15 +55,18 @@
   text-transform: uppercase;
   height: 3rem;
   padding: 0.5rem;
+  cursor: pointer;
   width: 10rem;
   border: none;
   border-radius: 30px;
 }
 
 .text-section button:hover {
-  opacity: 0.85;
+  background-color: var(--bg-blue);
+  border: 2px solid var(--blue);
+  color: var(--blue);
   transition: all;
-  transition-duration: 1s;
+  transition-duration: 0.4s;
 }
 
 /* Extra Small (XS) */
@@ -90,7 +93,7 @@
 }
 
 /* Small (SM) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 767px) {
   .girl-section {
     flex-wrap: wrap-reverse;
     height: max-content;
@@ -113,7 +116,7 @@
 }
 
 /* Medium (MD) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 991px) {
   .girl-section {
     padding: 4rem;
   }
@@ -134,7 +137,7 @@
 }
 
 /* Large (LG) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
   .image-section img {
     height: 32rem;
     width: 20rem;

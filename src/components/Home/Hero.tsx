@@ -10,7 +10,9 @@ const Hero = () => {
           Explore the Latest Trends and Timeless Classics to Elevate Your Home
           Decor
         </p>
-        <button>BUY NOW</button>
+        <a href='/shop'>
+          <button>BUY NOW</button>
+        </a>
       </div>
     </section>
   );

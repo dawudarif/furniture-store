@@ -66,7 +66,7 @@
 }
 
 /* Small (SM) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 767px) {
   .contact {
     padding: 1rem;
   }

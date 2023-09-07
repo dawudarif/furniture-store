@@ -19,11 +19,19 @@ function TrendingSlider() {
         <div className='title-btns'>
           <h3>Trending Now</h3>
           <div className='btns'>
-            <button title='scroll left' onClick={() => slideLeft()}>
-              <FaArrowLeft size={20} />
+            <button
+              title='scroll left'
+              className='flex'
+              onClick={() => slideLeft()}
+            >
+              <FaArrowLeft size={25} />
             </button>
-            <button title='scroll right' onClick={() => slideRight()}>
-              <FaArrowRight size={20} />
+            <button
+              title='scroll right'
+              className='flex'
+              onClick={() => slideRight()}
+            >
+              <FaArrowRight size={25} />
             </button>
           </div>
         </div>
