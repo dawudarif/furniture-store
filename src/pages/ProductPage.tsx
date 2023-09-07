@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-
 import { useParams } from 'react-router-dom';
 import { ShopData } from '../components/Data/ShopData';
 import TrendingSlider from '../components/TrendingSlider';
