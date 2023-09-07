@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ShopData } from '../components/Data/ShopData';
 import TrendingSlider from '../components/TrendingSlider';
 import { setCartData, setLength } from '../features/cartSlice';
@@ -10,6 +10,7 @@ import '../styles/ProductPage.css';
 
 const ProductPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [item, setItem] = useState<ShopData>();
   const [imgIndex, setImgIndex] = useState<number>(0);
   const [cartItems, setCartItems] = useState<Array<CartData>>([]);
@@ -30,7 +31,7 @@ const ProductPage = () => {
           price: fetchedData.price,
         });
       } else {
-        console.log('Item not found');
+        navigate('*');
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -110,9 +111,9 @@ const ProductPage = () => {
             <h1>{item?.title}</h1>
             <h3>{item?.desc}</h3>
             <p>
-              lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              incidunt rerum sint distinctio est placeat natus, rem veritatis
-              numquam earum libero. Tempora accusamus ea
+              Delightful tactile feel, enhancing user experience. Sturdy, robust
+              support for added durability. Built to last, ensuring reliable
+              performance.
             </p>
             <div className='quantity-box flex'>
               <h3>Quantity:</h3>
