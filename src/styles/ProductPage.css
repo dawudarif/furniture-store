@@ -206,7 +206,8 @@
     width: 35%;
     height: 4rem;
   }
-  .button-box button {
+  .button-box button,
+  .button-box button:hover {
     width: 45%;
     height: 3rem;
     margin: auto;
@@ -243,7 +244,8 @@
   .texture-box span {
     padding: 1rem;
   }
-  .button-box button {
+  .button-box button,
+  .button-box button:hover {
     width: 45%;
     height: 3rem;
     margin: auto;
@@ -277,7 +279,8 @@
   .texture-box span {
     padding: 1rem;
   }
-  .button-box button {
+  .button-box button,
+  .button-box button:hover {
     width: 40%;
     height: 3rem;
   }
