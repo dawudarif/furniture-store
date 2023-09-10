@@ -47,7 +47,7 @@ const Navbar = () => {
                 <div className='cart-child flex'>{length}</div>
               </div>
             </Link>
-            <GiHamburgerMenu onClick={() => setView(true)} size={30} />
+            <GiHamburgerMenu onClick={() => setView(!true)} size={30} />
           </div>
         </div>
       </nav>

@@ -194,11 +194,15 @@
   }
   .clear-all {
     height: 2rem;
-    width: 6rem;
+    width: 5rem;
+    white-space: nowrap;
+  }
+  .btn-container {
+    gap: 0.5rem;
   }
   .checkout-button {
     height: 2.2rem;
-    width: 6rem;
+    width: 5rem;
   }
   .cart-item img {
     width: 6rem;
