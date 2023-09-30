@@ -1,7 +1,7 @@
-interface ShopData {
+export interface ShopDataObj {
   id: number;
   title: string;
-  img: string[];
+  img: Array<string>;
   desc: string;
   type: string;
   price: string;
@@ -10,7 +10,7 @@ interface ShopData {
   dimensions: string;
 }
 
-interface CartData {
+export interface CartData {
   id: number;
   title: string;
   img: string;

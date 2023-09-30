@@ -1,5 +1,5 @@
 import deliver from '../../assets/deliver.svg';
-import sheild from '../../assets/sheild.svg';
+import shield from '../../assets/shield.svg';
 import twentyFour from '../../assets/twentyFour.svg';
 
 export const iconsData = [
@@ -19,6 +19,6 @@ export const iconsData = [
     id: 3,
     title: '100% Authentic',
     desc: 'Genuine, durable quality',
-    img: sheild,
+    img: shield,
   },
 ];

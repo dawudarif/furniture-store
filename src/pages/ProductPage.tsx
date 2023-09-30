@@ -7,11 +7,12 @@ import TrendingSlider from '../components/TrendingSlider';
 import { setCartData, setLength } from '../features/cartSlice';
 
 import '../styles/ProductPage.css';
+import { CartData, ShopDataObj } from '../types/types';
 
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [item, setItem] = useState<ShopData>();
+  const [item, setItem] = useState<ShopDataObj>();
   const [imgIndex, setImgIndex] = useState<number>(0);
   const [cartItems, setCartItems] = useState<Array<CartData>>([]);
   const [itemQuantity, setItemQuantity] = useState<number>(1);
@@ -91,7 +92,7 @@ const ProductPage = () => {
             alt={item?.title}
           />
           <div className='flex img-child'>
-            {item?.img.map((img, i) => (
+            {item?.img.map((img: string, i: number) => (
               <img
                 onMouseEnter={() => {
                   setImgIndex(i);

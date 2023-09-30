@@ -1,3 +1,5 @@
+import { ShopDataObj } from '../../types/types';
+
 function getRandomTexture() {
   const textures = ['Smooth', 'Textured', 'Patterned', 'Grainy'];
   const randomIndex = Math.floor(Math.random() * textures.length);
@@ -20,7 +22,7 @@ function getRandomDimensions() {
   return `${randomWidth}x${randomHeight}x${randomDepth} cm`;
 }
 
-export const ShopData: ShopData[] = [
+export const ShopData: Array<ShopDataObj> = [
   {
     id: 1,
     title: 'MALM',
