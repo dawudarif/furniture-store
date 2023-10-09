@@ -1,10 +1,16 @@
 footer {
-  padding: 5rem;
   background: var(--blue);
+  width: 100%;
+}
+
+.footer-wrapper {
+  padding: 5rem;
   color: var(--white);
   gap: 2rem;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .img-map {
@@ -70,7 +76,7 @@ footer {
 
 /* Small (SM) */
 @media (min-width: 576px) and (max-width: 767px) {
-  footer {
+  .footer-wrapper {
     flex-wrap: wrap;
     padding: 2rem;
   }
@@ -92,7 +98,7 @@ footer {
 
 /* Medium (MD) */
 @media (min-width: 768px) and (max-width: 991px) {
-  footer {
+  .footer-wrapper {
     flex-wrap: wrap;
     padding: 3rem;
   }

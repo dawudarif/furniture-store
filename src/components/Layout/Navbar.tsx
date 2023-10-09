@@ -12,42 +12,44 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='navbar flex-between'>
-        <div className='logo'>Furniture</div>
-        <div className='flex'>
-          <div className='nav-link'>
-            <ul className='flex'>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <a href='/shop'>Shop</a>
-              </li>
-              <li>
-                <Link to='/about'>About</Link>
-              </li>
-              <li>
-                <Link to='/contact'>Contact</Link>
-              </li>
-              <li>
-                <Link to='/cart'>
-                  <div className='cart-parent'>
-                    <HiOutlineShoppingBag size={30} />
-                    <div className='cart-child flex'>{length}</div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <nav className='navbar flex'>
+        <div className='nav-wrapper flex-between'>
+          <div className='logo'>Furniture</div>
+          <div className='flex'>
+            <div className='nav-link'>
+              <ul className='flex'>
+                <li>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li>
+                  <a href='/shop'>Shop</a>
+                </li>
+                <li>
+                  <Link to='/about'>About</Link>
+                </li>
+                <li>
+                  <Link to='/contact'>Contact</Link>
+                </li>
+                <li>
+                  <Link to='/cart'>
+                    <div className='cart-parent'>
+                      <HiOutlineShoppingBag size={30} />
+                      <div className='cart-child flex'>{length}</div>
+                    </div>
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          <div className='sandwich'>
-            <Link to='/cart'>
-              <div className='cart-parent'>
-                <HiOutlineShoppingBag size={30} />
-                <div className='cart-child flex'>{length}</div>
-              </div>
-            </Link>
-            <GiHamburgerMenu onClick={() => setView(!view)} size={30} />
+            <div className='sandwich'>
+              <Link to='/cart'>
+                <div className='cart-parent'>
+                  <HiOutlineShoppingBag size={30} />
+                  <div className='cart-child flex'>{length}</div>
+                </div>
+              </Link>
+              <GiHamburgerMenu onClick={() => setView(!view)} size={30} />
+            </div>
           </div>
         </div>
       </nav>

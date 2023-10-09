@@ -5,7 +5,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ShopData } from '../components/Data/ShopData';
 import TrendingSlider from '../components/TrendingSlider';
 import { setCartData, setLength } from '../features/cartSlice';
-
 import '../styles/ProductPage.css';
 import { CartData, ShopDataObj } from '../types/types';
 
@@ -83,101 +82,103 @@ const ProductPage = () => {
   }, []);
 
   return (
-    <>
-      <section className='product-page flex'>
-        <div className='flex img-parent'>
-          <img
-            src={item?.img[imgIndex]}
-            style={{ color: '#272116' }}
-            alt={item?.title}
-          />
-          <div className='flex img-child'>
-            {item?.img.map((img: string, i: number) => (
-              <img
-                onMouseEnter={() => {
-                  setImgIndex(i);
-                }}
-                onMouseLeave={() => {
-                  setImgIndex(0);
-                }}
-                key={i}
-                src={img}
-                alt='img'
-              />
-            ))}
+    <section id='product-page' className='flex'>
+      <div className='product-wrapper'>
+        <div className='product-page flex'>
+          <div className='flex img-parent'>
+            <img
+              src={item?.img[imgIndex]}
+              style={{ color: '#272116' }}
+              alt={item?.title}
+            />
+            <div className='flex img-child'>
+              {item?.img.map((img: string, i: number) => (
+                <img
+                  onMouseEnter={() => {
+                    setImgIndex(i);
+                  }}
+                  onMouseLeave={() => {
+                    setImgIndex(0);
+                  }}
+                  key={i}
+                  src={img}
+                  alt='img'
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className='details-box'>
-          <div className='details-container'>
-            <h1>{item?.title}</h1>
-            <h3>{item?.desc}</h3>
-            <p>
-              Delightful tactile feel, enhancing user experience. Sturdy, robust
-              support for added durability. Built to last, ensuring reliable
-              performance.
-            </p>
-            <div className='quantity-box flex'>
-              <h3>Quantity:</h3>
-              <span className='value-buttons flex'>
-                <button
-                  className='minus'
-                  onClick={() => handleQuantityChange(-1)}
-                >
-                  -
-                </button>
-                <p className='flex'>{itemQuantity}</p>
-                <button
-                  className='plus'
-                  onClick={() => handleQuantityChange(1)}
-                >
-                  +
-                </button>
+          <div className='details-box'>
+            <div className='details-container'>
+              <h1>{item?.title}</h1>
+              <h3>{item?.desc}</h3>
+              <p>
+                Delightful tactile feel, enhancing user experience. Sturdy,
+                robust support for added durability. Built to last, ensuring
+                reliable performance.
+              </p>
+              <div className='quantity-box flex'>
+                <h3>Quantity:</h3>
+                <span className='value-buttons flex'>
+                  <button
+                    className='minus'
+                    onClick={() => handleQuantityChange(-1)}
+                  >
+                    -
+                  </button>
+                  <p className='flex'>{itemQuantity}</p>
+                  <button
+                    className='plus'
+                    onClick={() => handleQuantityChange(1)}
+                  >
+                    +
+                  </button>
+                </span>
+              </div>
+              <h6 className='price'>
+                ${(Number(item?.price) * itemQuantity).toFixed(2)}
+              </h6>
+              <div className='button-box flex'>
+                <button className='buy-button'>BUY</button>
+                {cartIds.includes(Number(item?.id)) ? (
+                  <button
+                    onClick={() => removeCartItem(Number(item?.id))}
+                    className='added-button'
+                  >
+                    Added
+                  </button>
+                ) : (
+                  addCartValues && (
+                    <button
+                      onClick={() =>
+                        addToCart({ ...addCartValues, quantity: itemQuantity })
+                      }
+                      className='cart-button'
+                    >
+                      Add To Cart
+                    </button>
+                  )
+                )}
+              </div>
+            </div>
+            <div className='texture-box flex'>
+              <span>
+                <h1>Texture</h1>
+                <p>{item?.texture}</p>
+              </span>
+              <span>
+                <h1>Weight</h1>
+                <p>{item?.weight}</p>
+              </span>
+              <span>
+                <h1>Dimensions</h1>
+                <p>{item?.dimensions}</p>
               </span>
             </div>
-            <h6 className='price'>
-              ${(Number(item?.price) * itemQuantity).toFixed(2)}
-            </h6>
-            <div className='button-box flex'>
-              <button className='buy-button'>BUY</button>
-              {cartIds.includes(Number(item?.id)) ? (
-                <button
-                  onClick={() => removeCartItem(Number(item?.id))}
-                  className='added-button'
-                >
-                  Added
-                </button>
-              ) : (
-                addCartValues && (
-                  <button
-                    onClick={() =>
-                      addToCart({ ...addCartValues, quantity: itemQuantity })
-                    }
-                    className='cart-button'
-                  >
-                    Add To Cart
-                  </button>
-                )
-              )}
-            </div>
-          </div>
-          <div className='texture-box flex'>
-            <span>
-              <h1>Texture</h1>
-              <p>{item?.texture}</p>
-            </span>
-            <span>
-              <h1>Weight</h1>
-              <p>{item?.weight}</p>
-            </span>
-            <span>
-              <h1>Dimensions</h1>
-              <p>{item?.dimensions}</p>
-            </span>
           </div>
         </div>
-      </section>
-      <TrendingSlider />
-    </>
+        <TrendingSlider />
+      </div>
+    </section>
   );
 };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import BrowseRange from '../components/Home/BrowseRange';
 import Girl from '../components/Home/Girl';
 import Hero from '../components/Home/Hero';

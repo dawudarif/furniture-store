@@ -1,14 +1,19 @@
 .hero {
+  width: 100%;
+  background-image: url(../assets/hero.jpg);
+}
+
+.hero-wrapper {
   min-height: 40rem;
   max-height: max-content;
   width: 100%;
-  background-image: url(../assets/hero.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: center;
+  max-width: 1600px;
 }
 
 .hero-child {
@@ -54,6 +59,7 @@
   border-radius: 30px;
   cursor: pointer;
 }
+
 .hero-child button:hover {
   background-color: var(--bg-blue);
   border: 2px solid var(--blue);

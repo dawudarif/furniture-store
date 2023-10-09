@@ -24,37 +24,39 @@ const Shop = () => {
   };
 
   return (
-    <main className='flex shop'>
-      <h1>{selectedTag}</h1>
-      {displayTags.length !== 0 && (
-        <p className='tags flex'>
-          {displayTags.map((item, i) => (
-            <span
-              className='tag flex'
-              key={i}
-              style={
-                selectedTag === item
-                  ? { backgroundColor: 'var(--grey)', color: '#fff' }
-                  : {}
-              }
-              onClick={() => setSelectedTag(item)}
-            >
-              {item}
-            </span>
-          ))}
-        </p>
-      )}
+    <main className='shop-wrapper flex'>
+      <div className='flex shop'>
+        <h1>{selectedTag}</h1>
+        {displayTags.length !== 0 && (
+          <p className='tags flex'>
+            {displayTags.map((item, i) => (
+              <span
+                className='tag flex'
+                key={i}
+                style={
+                  selectedTag === item
+                    ? { backgroundColor: 'var(--grey)', color: '#fff' }
+                    : {}
+                }
+                onClick={() => setSelectedTag(item)}
+              >
+                {item}
+              </span>
+            ))}
+          </p>
+        )}
 
-      <div className='grid'>
-        {filteredShopData.map((item) => (
-          <a href={`/shop/${item.id}`} key={item.id} className='item'>
-            <img src={item.img[0]} alt={item.title} />
-            <div className='text-container'>
-              <h4>{item.title}</h4>
-              <h6>${item.price}</h6>
-            </div>
-          </a>
-        ))}
+        <div className='grid'>
+          {filteredShopData.map((item) => (
+            <a href={`/shop/${item.id}`} key={item.id} className='item'>
+              <img src={item.img[0]} alt={item.title} />
+              <div className='text-container'>
+                <h4>{item.title}</h4>
+                <h6>${item.price}</h6>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </main>
   );

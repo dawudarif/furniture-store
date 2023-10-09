@@ -1,8 +1,14 @@
+.cart-wrapper {
+  width: 100%;
+}
+
 .cart-container {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   padding: 5rem;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .cart-header h2 {

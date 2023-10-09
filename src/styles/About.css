@@ -1,6 +1,12 @@
+.about-wrapper {
+  width: 100%;
+}
+
 .about {
   flex-direction: column;
   padding: 5rem;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .about h1 {

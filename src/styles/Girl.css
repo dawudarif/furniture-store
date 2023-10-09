@@ -1,8 +1,14 @@
 .girl-section {
+  background-color: var(--bg-blue);
+  width: 100%;
+}
+
+.girl-wrapper {
+  width: 100%;
+  max-width: 1600px;
   padding: 7rem;
   height: 30rem;
   gap: 4rem;
-  background-color: var(--bg-blue);
 }
 
 .image-section {
@@ -71,7 +77,7 @@
 
 /* Extra Small (XS) */
 @media (max-width: 575px) {
-  .girl-section {
+  .girl-wrapper {
     flex-wrap: wrap-reverse;
     height: max-content;
     padding: 2rem;
@@ -94,7 +100,7 @@
 
 /* Small (SM) */
 @media (min-width: 575px) and (max-width: 767px) {
-  .girl-section {
+  .girl-wrapper {
     flex-wrap: wrap-reverse;
     height: max-content;
     padding: 2rem;
@@ -117,7 +123,7 @@
 
 /* Medium (MD) */
 @media (min-width: 767px) and (max-width: 991px) {
-  .girl-section {
+  .girl-wrapper {
     padding: 4rem;
   }
   .image-section img {

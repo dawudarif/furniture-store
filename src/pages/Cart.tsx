@@ -10,7 +10,7 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState<null | Array<any>>(cartData);
   const dispatch = useDispatch();
 
-  console.log(cartItems);
+  // console.log(cartItems);
 
   const getCartItems = async () => {
     let data = cartData;
@@ -71,68 +71,70 @@ const Cart = () => {
   }, []);
 
   return (
-    <div className='cart-container'>
-      <div className='cart-header flex'>
-        <h2>Your Cart</h2>
-      </div>
-      {cartItems === null || cartItems?.length === 0 ? (
-        <h1 className='flex no-items'>No items in cart</h1>
-      ) : (
-        <>
-          <div className='cart-items'>
-            {cartItems?.length !== 0 &&
-              cartItems?.map((item, i) => (
-                <div key={item.id}>
-                  <div className='cart-item flex'>
-                    <img src={item.img} alt={item.title} />
-                    <div className='item-details'>
-                      <h3>{item.title}</h3>
-                      <span className='price-span'>
-                        <b>Price:</b>
-                        <p>${item.price}</p>
-                      </span>
-                      <span className='price-span'>
-                        <b>Subtotal:</b>
-                        <p>${(item.price * item.quantity).toFixed(2)}</p>
-                      </span>
-                      <span className='flex amount-button'>
-                        <button
-                          className='flex'
-                          onClick={() => itemQuantity(item, -1)}
+    <div className='cart-wrapper flex'>
+      <div className='cart-container'>
+        <div className='cart-header flex'>
+          <h2>Your Cart</h2>
+        </div>
+        {cartItems === null || cartItems?.length === 0 ? (
+          <h1 className='flex no-items'>No items in cart</h1>
+        ) : (
+          <>
+            <div className='cart-items'>
+              {cartItems?.length !== 0 &&
+                cartItems?.map((item, i) => (
+                  <div key={item.id}>
+                    <div className='cart-item flex'>
+                      <img src={item.img} alt={item.title} />
+                      <div className='item-details'>
+                        <h3>{item.title}</h3>
+                        <span className='price-span'>
+                          <b>Price:</b>
+                          <p>${item.price}</p>
+                        </span>
+                        <span className='price-span'>
+                          <b>Subtotal:</b>
+                          <p>${(item.price * item.quantity).toFixed(2)}</p>
+                        </span>
+                        <span className='flex amount-button'>
+                          <button
+                            className='flex'
+                            onClick={() => itemQuantity(item, -1)}
+                          >
+                            -
+                          </button>
+                          <span className='flex'>{item.quantity}</span>
+                          <button
+                            className='flex'
+                            onClick={() => itemQuantity(item, 1)}
+                          >
+                            +
+                          </button>
+                        </span>
+                        <span
+                          className='remove-btn'
+                          onClick={() => removeCartItem(item.id)}
                         >
-                          -
-                        </button>
-                        <span className='flex'>{item.quantity}</span>
-                        <button
-                          className='flex'
-                          onClick={() => itemQuantity(item, 1)}
-                        >
-                          +
-                        </button>
-                      </span>
-                      <span
-                        className='remove-btn'
-                        onClick={() => removeCartItem(item.id)}
-                      >
-                        <RxCross2 size={26} />
-                      </span>
+                          <RxCross2 size={26} />
+                        </span>
+                      </div>
                     </div>
+                    {cartItems.length - 1 !== i && <hr />}
                   </div>
-                  {cartItems.length - 1 !== i && <hr />}
-                </div>
-              ))}
-          </div>
-        </>
-      )}
-      <div className='cart-footer'>
-        <div className='line'></div>
-        <div className='price-head'>
-          <p>Total: ${calculateTotalPrice()}</p>
-          <div className='btn-container flex'>
-            <button className='clear-all flex' onClick={clearAll}>
-              Clear All
-            </button>
-            <button className='checkout-button flex'>Checkout</button>
+                ))}
+            </div>
+          </>
+        )}
+        <div className='cart-footer'>
+          <div className='line'></div>
+          <div className='price-head'>
+            <p>Total: ${calculateTotalPrice()}</p>
+            <div className='btn-container flex'>
+              <button className='clear-all flex' onClick={clearAll}>
+                Clear All
+              </button>
+              <button className='checkout-button flex'>Checkout</button>
+            </div>
           </div>
         </div>
       </div>
