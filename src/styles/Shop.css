@@ -1,11 +1,12 @@
 .shop-wrapper {
-  width: 100;
+  width: 100%;
 }
 
 .shop {
   flex-direction: column;
   padding: 2rem;
   max-width: 1600px;
+  box-sizing: border-box;
   width: 100%;
 }
 
