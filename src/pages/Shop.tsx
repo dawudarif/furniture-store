@@ -1,13 +1,14 @@
-import '../styles/Shop.css';
-import { ShopData } from '../components/Data/ShopData';
-import { useEffect, useState } from 'react';
+import "../styles/Shop.css";
+import { ShopData } from "../components/Data/ShopData";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
-  const [displayTags, setDisplayTags] = useState<string[]>(['All']);
-  const [selectedTag, setSelectedTag] = useState<string>('All');
+  const [displayTags, setDisplayTags] = useState<string[]>(["All"]);
+  const [selectedTag, setSelectedTag] = useState<string>("All");
 
   const filteredShopData =
-    selectedTag !== 'All'
+    selectedTag !== "All"
       ? ShopData.filter((item) => item.type === selectedTag)
       : ShopData;
 
@@ -19,23 +20,23 @@ const Shop = () => {
     let newTags = shopData.map((item: any) => item.type);
     const uniqueFurniture = new Set(newTags);
     const furnitureArray = Array.from(uniqueFurniture);
-    furnitureArray.unshift('All');
+    furnitureArray.unshift("All");
     setDisplayTags(furnitureArray as string[]);
   };
 
   return (
-    <main className='shop-wrapper flex'>
-      <div className='flex shop'>
+    <main className="shop-wrapper flex">
+      <div className="flex shop">
         <h1>{selectedTag}</h1>
         {displayTags.length !== 0 && (
-          <p className='tags flex'>
+          <p className="tags flex">
             {displayTags.map((item, i) => (
               <span
-                className='tag flex'
+                className="tag flex"
                 key={i}
                 style={
                   selectedTag === item
-                    ? { backgroundColor: 'var(--grey)', color: '#fff' }
+                    ? { backgroundColor: "var(--grey)", color: "#fff" }
                     : {}
                 }
                 onClick={() => setSelectedTag(item)}
@@ -46,15 +47,15 @@ const Shop = () => {
           </p>
         )}
 
-        <div className='grid'>
+        <div className="grid">
           {filteredShopData.map((item) => (
-            <a href={`/shop/${item.id}`} key={item.id} className='item'>
+            <Link to={`/shop/${item.id}`} key={item.id} className="item">
               <img src={item.img[0]} alt={item.title} />
-              <div className='text-container'>
+              <div className="text-container">
                 <h4>{item.title}</h4>
                 <h6>${item.price}</h6>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
